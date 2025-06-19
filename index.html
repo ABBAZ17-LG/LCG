@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .pagebackground{
+            position: relative;
+        }
+        .bgimg{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            filter: brightness(50%);
+        }
+        .tap{
+            position: absolute;
+            font-size: larger;
+            color: rgb(204, 240, 240);
+            top: 560px;
+            right: 100px;
+            text-decoration: none;
+        }
+        
+        .gameLogo{
+            position: absolute;
+            width: 40%;
+            height: 60vh;
+            border-radius: 80%;
+            right: 10vh;
+            top: 12vh;
+            filter: brightness(100%);
+            filter: opacity(90%);
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="pagebackground">
+        <img src="Asserts/homescreenbg.jpg" alt="" class="bgimg">
+        <img src="asserts/gameLogo.jpg" alt="" class="gameLogo">
+        <a href="select_team.html" class="tap">Tap to continue...</a>
+    </div>
+    
+
+    <script src="script/index.js"></script>
+</body>
+</html>

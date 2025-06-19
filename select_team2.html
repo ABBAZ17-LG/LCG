@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelactTeam</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            margin: 0px;
+            position: relative;
+            height: 625px;
+
+        }
+        .bg{
+            position: absolute;
+            margin: 0px;
+            height: 93%;
+            width: 100%;
+            filter: brightness(60%);
+
+        }
+        .me{
+            position: absolute;
+            background-color: transparent;
+            top: 120px;
+            left: 300px;
+            width: 320px;
+            height: 380px;
+            text-align: center;
+        }
+        .me img{
+            width: 240px;
+            height: 180px;
+        }
+        .op{
+            position: absolute;
+            background-color:transparent;
+            top: 120px;
+            right: 300px;
+            width: 320px;
+            height: 380px;
+            text-align: center;
+        }
+        .op img{
+            width: 240px;
+            height: 180px;
+        }
+        .iplLogo{
+            position: absolute;
+            height: 60px;
+            width: 100px;
+            right: 50px;
+            top: 60px;
+        }
+        button{
+            position: absolute;
+            color: black;
+            background-color: rgb(18, 233, 29);
+            border-radius: 10px;
+            padding: 15px;
+            width: 7%;
+            top: 500px;
+            right: 100px;
+            cursor: pointer;
+        }
+        button:hover{
+            color: rgb(18, 233, 29);
+            background-color: black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="background-color: rgb(15, 15, 15);margin:0px;padding:10px;color:white;font-size: 20px;text-align: center;">SELACT YOUR TEAM</h1>
+        <img src="Asserts/Narendra statium.jpg" alt="" class="bg">
+        <table style="margin-left: 24%;">
+            <tr>
+                <td >
+                    <div class="me">
+                        <label style="color:white;display: block;margin-bottom: 30px;">YOU</label>
+                        <select id="you" style="padding-left: 20px; height: 40px; border-radius:5px;cursor: pointer;width: 250px;color: white;background-color:black;">
+                            <option value="mi">Mumbai Indians</option>
+                            <option value="csk">Chennai Super Kings</option>
+                            <option value="rcb">Royal Challangers Banglore</option>
+                            <option value="gt">Gujarat Titans</option>
+                            <option value="rr">Rajastan Royals</option>
+                            <option value="dc">Deli Capitals</option>
+                            <option value="kkr">Kolkata Kinight Riders</option>
+                            <option value="pbks">Punjab Kings</option>
+                            <option value="lsg">Lucknow Super Gaints</option>
+                            <option value="srh">Sunrisers Hydrabad</option>
+                        </select>
+                        <img id = "yourlogo" src="Asserts/logos/mi.png" style="margin-left: 1px;margin-top: 50px;">
+                    </div>
+                </td>
+                <td >
+                    <div class="op">
+                        <label style="color:white;display: block;margin-bottom: 30px;">OPONENT</label>
+                        <select id="op" style="padding-left: 20px; height: 40px; border-radius:5px;cursor: pointer;width: 250px;color: white;background-color:black;">
+                            <option value="csk">Chennai Super Kings</option>
+                            <option value="mi">Mumbai Indians</option>
+                            <option value="rcb">Royal Challangers Banglore</option>
+                            <option value="gt">Gujarat Titans</option>
+                            <option value="rr">Rajastan Royals</option>
+                            <option value="dc">Deli Capitals</option>
+                            <option value="kkr">Kolkata Kinight Riders</option>
+                            <option value="pbks">Punjab Kings</option>
+                            <option value="lsg">Lucknow Super Gaints</option>
+                            <option value="srh">Sunrisers Hydrabad</option>
+                        </select>
+                        <img id = "oplogo" src="Asserts/logos/csk.png" style="margin-left: 1px;margin-top: 50px;">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <img src="Asserts/logos/ipl_s_10.png" alt="" class="iplLogo">
+        <button onclick="submitTeamSelection()">Next</button>
+    </div>
+    
+
+    <script type="text/javascript">
+        const youteam = document.getElementById("you");
+        const opteam = document.getElementById("op");
+        let youteamlogo = document.querySelector('#yourlogo')
+        let opteamlogo = document.querySelector('#oplogo')
+        youteam.addEventListener('change',function(){
+            let selectedTeam = event.target.value;
+            youteamlogo.src = "Asserts/logos/"+selectedTeam+".png";
+            console.log(selectedTeam);
+        });
+        opteam.addEventListener('change',function(){
+            let selectedTeam = event.target.value;
+            opteamlogo.src = "Asserts/logos/"+selectedTeam+".png";
+            console.log(opteamlogo.src);
+        });
+    </script>
+</body>
+</html>
